@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Skill Form</title>
+    <link rel="stylesheet" href="skills.css">
+   
+</head>
+<body>
+    <div class="container">
+        <button id="add-skill-btn">Add Skill</button>
+        
+        <!-- Modal Dialog -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="close-btn" class="close">&times;</span>
+                <h2 class="add-heading">Add Skill</h2>
+                <form id="skill-form">
+                    <div class="form-group">
+                        <label for="domain" >Domain:</label>
+                        <input type="text" id="domain" name="domain"  placeholder="Front-end developer" required>
+                        <span class="error" id="domain-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="skills">Skills:</label>
+                        <div id="skills-container">
+                            <div class="skill-row">
+                                <input type="text" name="skill-name" placeholder="Skill Name" required>
+                                <select name="proficiency" required>
+                                    <option value="">Proficiency</option>
+                                    <option value="Beginner">Beginner</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Expert">Expert</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="button" id="add-skill-field">Add Another Skill</button>
+                        <span class="error" id="skills-error"></span>
+                    </div>
+
+                    <button  class="my-btn" type="submit" id="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
